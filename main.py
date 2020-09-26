@@ -81,7 +81,7 @@ while check == 'true':
             #if an error that is stated above occurs, this code happens
             #if the path name was too long, the url will be saved into the downloaded list so this is to take it back out
             if url in urls['urls']:
-                urls['urls'].pop(url)
+                urls['urls'].remove(url)
                 with open('urls.json','w') as f:
                     json.dump(urls, f, indent = 4)
             #adds the new link to the error causing link list
